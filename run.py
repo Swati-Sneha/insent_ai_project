@@ -17,7 +17,6 @@ import logging
 from telegram.ext import Filters, Updater, CommandHandler, InlineQueryHandler, ConversationHandler, RegexHandler, MessageHandler
 from telegram import InlineQueryResultArticle, InputTextMessageContent, ReplyKeyboardMarkup, ReplyKeyboardRemove, ChatAction
 from intents import intents
-import util_funcs as uf
 from sqlalchemy import create_engine
 from sqlalchemy import Table, Column, Integer, String, MetaData
 
@@ -30,7 +29,7 @@ token = config.get('settings', 'token')
 typing_time = config.getint('settings', 'typing_time')
 db_url=config.get('settings', 'DB_URL')
 
-
+print(token)
 updater = Updater(token=token, use_context=True)
 dispatcher = updater.dispatcher
 
